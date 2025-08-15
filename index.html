@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URUA Exposure Waste Management</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- App Container -->
+  <div class="app-container">
+
+    <!-- Logo & Branding -->
+    <div class="branding">
+      <img src="logo.png" alt="URUA Exposure" class="logo">
+      <h1>URUA Exposure</h1>
+      <p>Waste Management</p>
+    </div>
+
+    <!-- Login Screen -->
+    <div id="login" class="screen active">
+      <h2>Login</h2>
+      <input id="email" type="email" placeholder="Email">
+      <input id="password" type="password" placeholder="Password">
+      <button onclick="loginUser()">Login</button>
+      <p class="small-text">Don’t have an account? 
+        <a href="#" onclick="alert('Registration flow placeholder')">Register</a>
+      </p>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="screen">
+      <h2>Welcome, John!</h2>
+      <div class="card green">
+        <p>Next Pickup: <span class="bold">Aug 20, 8:00 AM</span></p>
+      </div>
+      <div class="card blue">
+        <p>This Month’s Recycling: <span class="bold">22 kg</span></p>
+        <p>Rewards: <span class="bold">12.5 ICBRC</span></p>
+      </div>
+      <div class="actions">
+        <button onclick="showScreen('schedule')" class="yellow">Schedule Pickup</button>
+        <button onclick="showScreen('history')" class="blue">History</button>
+      </div>
+    </div>
+
+    <!-- Schedule Pickup -->
+    <div id="schedule" class="screen">
+      <h2>Schedule Pickup</h2>
+      <label>Date</label>
+      <input type="date">
+
+      <label>Time</label>
+      <input type="time">
+
+      <label>Waste Type</label>
+      <select>
+        <option>Plastic</option>
+        <option>Paper</option>
+        <option>Glass</option>
+        <option>Metal</option>
+      </select>
+
+      <label>Instructions</label>
+      <textarea placeholder="Leave bin outside..."></textarea>
+
+      <button onclick="alert('Pickup Scheduled!')" class="green">Confirm</button>
+    </div>
+
+    <!-- History -->
+    <div id="history" class="screen">
+      <h2>Recycling History</h2>
+      <div class="card gray">Aug 10: 5kg Plastic - 5 ICBRC</div>
+      <div class="card gray">Aug 12: 3kg Paper - 2 ICBRC</div>
+    </div>
+
+    <!-- Pickup Points -->
+    <div id="pickups" class="screen">
+      <h2>Pickup Points</h2>
+      <div class="map-placeholder">[Map Placeholder]</div>
+    </div>
+
+    <!-- Profile -->
+    <div id="profile" class="screen">
+      <h2>My Profile</h2>
+      <p><b>Name:</b> John Doe</p>
+      <p><b>Email:</b> john@example.com</p>
+      <p><b>Total Recycled:</b> 120kg</p>
+      <p><b>Rewards:</b> 80 ICBRC</p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <button onclick="showScreen('dashboard')">🏠</button>
+      <button onclick="showScreen('schedule')">📅</button>
+      <button onclick="showScreen('history')">📜</button>
+      <button onclick="showScreen('pickups')">📍</button>
+      <button onclick="showScreen('profile')">👤</button>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
