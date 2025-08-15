@@ -1,0 +1,100 @@
+/* General Layout */
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+  margin: 0;
+  padding: 0;
+}
+
+/* App Container */
+.app-container {
+  max-width: 400px;
+  margin: auto;
+  background: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Branding */
+.branding {
+  text-align: center;
+  padding: 20px;
+  background: #064e3b;
+  color: white;
+}
+.logo {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+/* Screens */
+.screen {
+  display: none;
+  padding: 20px;
+  flex: 1;
+}
+.screen.active {
+  display: block;
+}
+
+/* Inputs & Buttons */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+button.green { background: #10b981; color: white; }
+button.blue { background: #3b82f6; color: white; }
+button.yellow { background: #facc15; color: black; }
+
+/* Cards */
+.card {
+  padding: 12px;
+  border-radius: 6px;
+  margin: 8px 0;
+}
+.card.green { background: #d1fae5; }
+.card.blue { background: #dbeafe; }
+.card.gray { background: #f3f4f6; }
+
+/* Other */
+.bold { font-weight: bold; }
+.actions { display: flex; gap: 10px; margin-top: 10px; }
+.map-placeholder {
+  background: #e5e7eb;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  border-radius: 6px;
+}
+.small-text { font-size: 12px; }
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  padding: 12px;
+  background: #e5e7eb;
+  border-top: 1px solid #ddd;
+}
+.navbar button {
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
